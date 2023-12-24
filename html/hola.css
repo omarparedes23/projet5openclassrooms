@@ -1,0 +1,34 @@
+.erreur {
+
+    border:1px solid red;
+
+}
+.erreur_titre{
+    margin-top: 174px;
+    margin-bottom: 0;
+    color: #ff6060;
+    height: 263px;
+    width: 597px;
+
+
+
+    text-align: center;
+    align-self: center;
+
+    font-size: 250px;
+    font-weight: 700;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+
+    border:1px solid blue;
+
+}
+.erreur_demandez{
+    margin-top: 66px;
+
+    font-weight: 500;
+    font-size: clamp(20px, 4vw, 36px);
+    text-align: center;
+    border:1px solid green;
+}
