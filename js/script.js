@@ -4,11 +4,11 @@
 //* insérer chaque élément (chaque produit) dans la page d’accueil
 //* (dans le DOM).
 //*------------------------------------------------------------------------
-localStorage.setItem("ipaws","13.37.191.74:3010");
+localStorage.setItem("ipaws","easytable.zapto.org");
 //let ip="ec2-35-181-51-145.eu-west-3.compute.amazonaws.com:3010";
 //let url = "http://" + ip + ":3000/api/products";
 //"http://localhost:3000/api/products"
-fetch("http://"+localStorage.getItem("ipaws")+"/api/products")
+fetch("https://"+localStorage.getItem("ipaws")+"/api/products")
   .then((response) => response.json())
   .then((data) => {
     const idItems = document.getElementById("items");

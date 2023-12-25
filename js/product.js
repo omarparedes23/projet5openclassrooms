@@ -8,7 +8,7 @@ let produitsPanier = localStorage.getItem("cart");
 //* Insérer un produit et ses détails dans la page Produit
 //fetch("http://localhost:3000/api/products/" + idkanap)
 
-fetch("http://"+localStorage.getItem("ipaws")+"/api/products/" + idkanap)
+fetch("https://"+localStorage.getItem("ipaws")+"/api/products/" + idkanap)
   .then((response) => response.json())
   .then((data) => {
     let selectColors = document.getElementById("colors");

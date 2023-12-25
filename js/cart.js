@@ -19,7 +19,7 @@ if (produitsPanier === null) {
     let quantity = parseProdPanier[i][1];
     
     //fetch("http://localhost:3000/api/products/" + id)
-    fetch("http://"+localStorage.getItem("ipaws")+"/api/products/" + id)
+    fetch("https://"+localStorage.getItem("ipaws")+"/api/products/" + id)
       .then((response) => response.json())
       .then((data) => {
         let cartItems = document.getElementById("cart__items");
@@ -165,7 +165,7 @@ if (produitsPanier === null) {
       //Si ce numéro doit être affiché, on supprime les produits du localstorage
       
       //fetch("http://localhost:3000/api/products/order", {
-      fetch("http://"+localStorage.getItem("ipaws")+"/api/products/order", {
+      fetch("https://"+localStorage.getItem("ipaws")+"/api/products/order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -194,7 +194,7 @@ function changePanier(idProd, colorProd, quantite) {
       localStorage.setItem("cart", JSON.stringify(parseProdPanier));
       //fetch("http://localhost:3000/api/products/" + idProd)
       
-      fetch("http://"+localStorage.getItem("ipaws")+"/api/products/" + idProd)
+      fetch("https://"+localStorage.getItem("ipaws")+"/api/products/" + idProd)
         .then((response) => response.json())
         .then((data) => {
           document.getElementById("totalQuantity").innerHTML =
@@ -227,7 +227,7 @@ function deletePanier(idProd, colorProd) {
     parseProdPanier.splice(index, 1);
     //fetch("http://localhost:3000/api/products/" + idProd)
     
-    fetch("http://"+localStorage.getItem("ipaws")+"/api/products/" + idProd)
+    fetch("https://"+localStorage.getItem("ipaws")+"/api/products/" + idProd)
       .then((response) => response.json())
       .then((data) => {
         document.getElementById("totalQuantity").innerHTML =
